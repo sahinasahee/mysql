@@ -1,0 +1,26 @@
+create database db;
+drop database db;
+create database student;
+create database class;
+
+show databases;
+use class;
+
+create table persons
+(id int,
+firstname varchar(255),
+lastname varchar(255),
+address varchar(255)
+);
+
+insert into persons (id, firstname,lastname,address)
+values(24,"sana",'m','sanavilla'),
+(24,'sana','m','sanavilla');
+select * from persons;
+alter table persons rename column id to personsid;
+insert into persons values(2.5,'raha','m','goa');
+select * from persons;
+select distinct firstname from persons;
+
+alter table persons modify column id float;
+select * from persons where address='goa';
