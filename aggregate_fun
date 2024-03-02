@@ -1,0 +1,19 @@
+create table customer(id int,name varchar(20),product varchar(50),amount int);
+insert into customer values(1,"mayavi","mobile",20000);
+insert into customer values(2,"raju","laptop",35000);
+insert into customer values(3,"dagini","stove",4000);
+insert into customer values(4,"kuttu","mobile",30000);
+select * from customer;
+select min(amount) from customer;
+select max(amount) from customer;
+select count(product) from customer where amount>20000;
+select sum(amount) from customer;
+select avg(amount) from customer;
+select first(id) from customer;
+
+
+#scalar function
+
+select upper(name) from customer;
+select lower(name) from customer;
+
