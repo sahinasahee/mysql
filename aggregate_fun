@@ -17,3 +17,6 @@ select first(id) from customer;
 select upper(name) from customer;
 select lower(name) from customer;
 
+select length(name) from customer;
+
+
