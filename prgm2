@@ -1,0 +1,20 @@
+create table student1 (id int ,studentname varchar(20),age int,score int);
+insert into student1 values(123,"sara",27,56);
+insert into student1 values(112,"punya",22,46);
+insert into student1 values(113,"meena",23,67);
+insert into student1 values(114,"manu",26,68);
+select * from student1;
+select * from student1 where  age >25;
+select * from student1 where score between 50 and 60;
+select * from student1 where studentname like "%a"; 
+select age,score from student1 order by studentname;
+select age,score from student1 order by studentname desc;
+select age,score from student1 order by studentname asc;
+
+select * from student1 where age=23 and studentname like "m%";
+select * from student1 where age=20 or studentname like "%a";
+
+update student1 set studentname="abu", age=30 where id=114;
+
+delete from student1 where id=123; 
+truncate table persons;
