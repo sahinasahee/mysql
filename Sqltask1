@@ -1,0 +1,31 @@
+create database movie2;
+use movie2;
+create table distribution_companie(Id int primary key,company_name varchar(20));
+insert into distribution_companie values(1,"motion magic");
+insert into distribution_companie values(2,"starlight studios");
+insert into distribution_companie values(3,"sony pictures");
+insert into distribution_companie values(4,"paramount pictures");
+insert into distribution_companie values(5,"warner bros");
+
+create table movies(
+id int primary key,
+ movie_title varchar(20),
+ imdb_rating float,
+ year_released int, 
+ budget int, 
+ box_office int,
+foreign key(id) references distribution_companie(id),
+language varchar(20)); 
+
+insert into movies values(1,"interstellar",8.7,2014,16,70,"english");
+insert into movies values (2,"home alone",6.5,1990,24,90,"english");
+insert into movies values (3,"premalu",2.5,2024,24,70,"malayalam");
+insert into movies values (4,"harry potter",10.1,1999,45,100,"english");
+
+select * from movies;
+select movie_title,imdb_rating from movies;
+select  imdb_rating,budget from movies where year_released > 2020;
+select id,budget from movies where movie_title <1990;
+select year_released ,budget  from movies where box_office<20 or imdb_rating >5;
+select id ,movie_title from movies where year_released> 1995 order by id;
+
