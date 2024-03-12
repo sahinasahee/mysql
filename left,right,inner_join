@@ -1,0 +1,20 @@
+create database new;
+use new;
+create table staff (staffid int primary key,name varchar(20),age int,address varchar(20),monthly_package int);
+insert into staff values(11 ,'rahul',23,'rahul house',70000);
+insert into staff values(12 ,'sana',20,'sanavilla',50000);
+insert into staff values(13 ,'meera',29,'meera house',90000);
+insert into staff values(14 ,'nadira',26,'nadirahouse',80000);
+
+create table payment(payment_id int, type varchar(50),id int,amount int);
+insert into payment values(110,'card',11,70000);
+insert into payment values(120,'card',12,50000);
+insert into payment values(130,'card',7,450000);
+insert into payment values(140,'card',8,60000);
+drop table payment;
+
+select staffid, name ,age,amount from staff inner join payment on staff.staffid=payment.id;
+select staffid, name ,age,amount from staff left join payment on staff.staffid=payment.id;
+select staffid, name ,age,amount from staff right join payment on staff.staffid=payment.id;
+
+
