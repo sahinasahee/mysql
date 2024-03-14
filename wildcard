@@ -1,0 +1,18 @@
+create database wildcard;
+use wildcard;
+create table student(name varchar(20),rollnumber int ,mark int);
+insert into student values('akhila',1,56);
+insert into student values('nithin',2,49);
+insert into student values('rahul',3,46);
+insert into student values('sahena',4,98);
+insert into student values('kiran',5,67);
+insert into student values('kirana',5,67);
+
+select * from student where name like 'a%';
+select * from student where name like '%a';
+select * from student where name like '%in';
+select * from student where name like '%e%';
+select * from student where name like '_____a';
+
+select name as studentname from student;
+select rollnumber as rollno , mark as marks from student;
